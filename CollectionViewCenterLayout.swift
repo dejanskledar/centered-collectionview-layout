@@ -48,8 +48,8 @@ class UICollectionViewCenterLayout: UICollectionViewFlowLayout {
         var currentRowY: CGFloat = -1
 
         for attribute in attributes {
-            if currentRowY != attribute.frame.origin.y {
-                currentRowY = attribute.frame.origin.y
+            if currentRowY != attribute.frame.midY {
+                currentRowY = attribute.frame.midY
                 rows.append(CollectionViewRow(spacing: 10))
             }
             rows.last?.add(attribute: attribute)
